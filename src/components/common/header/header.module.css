@@ -1,0 +1,14 @@
+.header {
+  color: rgb(246, 240, 240);
+  text-align: left;
+  padding: 100px;
+}
+
+.title {
+  font-size: 3.5em;
+}
+
+.intro {
+  font-size: 2em;
+  font-weight: 500;
+}

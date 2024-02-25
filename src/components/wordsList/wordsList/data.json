@@ -1,0 +1,98 @@
+[
+  {
+    "id": "15271",
+    "english": "кошка",
+    "transcription": "[kæt]",
+    "russian": "cat",
+    "tags": "",
+    "tags_json": "[\"\"]"
+  },
+  {
+    "id": "15272",
+    "english": "dog",
+    "transcription": "[dɒg]",
+    "russian": "собака",
+    "tags": "",
+    "tags_json": "[\"\"]"
+  },
+  {
+    "id": "15274",
+    "english": "money",
+    "transcription": "money",
+    "russian": "деньги",
+    "tags": "",
+    "tags_json": "[]"
+  },
+  {
+    "id": "15278",
+    "english": "monkey",
+    "transcription": "[monkey]",
+    "russian": "обезьяна",
+    "tags": "обезьяна",
+    "tags_json": "[\"u043eu0431u0435u0437u044cu044fu043du0430\"]"
+  },
+  {
+    "id": "15279",
+    "english": "orange",
+    "transcription": "[orange]",
+    "russian": "оранжевый",
+    "tags": "оранжевый",
+    "tags_json": "[\"u043eu0440u0430u043du0436u0435u0432u044bu0439\"]"
+  },
+  {
+    "id": "15281",
+    "english": "lesson",
+    "transcription": "[lesson]",
+    "russian": "урок",
+    "tags": "",
+    "tags_json": "[]"
+  },
+  {
+    "id": "15286",
+    "english": "test",
+    "transcription": "[test]",
+    "russian": "тест",
+    "tags": "zdsfgh",
+    "tags_json": "[\"zdsfgh\"]"
+  },
+  {
+    "id": "15289",
+    "english": "cats",
+    "transcription": "[cats]",
+    "russian": "кошки",
+    "tags": "",
+    "tags_json": "[]"
+  },
+  {
+    "id": "15291",
+    "english": "flower",
+    "transcription": "[flower]",
+    "russian": "цветок",
+    "tags": "",
+    "tags_json": "[]"
+  },
+  {
+    "id": "15293",
+    "english": "qewrer",
+    "transcription": "weertq",
+    "russian": "q",
+    "tags": "qertwy",
+    "tags_json": "[\"qertwy\"]"
+  },
+  {
+    "id": "15294",
+    "english": "dsasad",
+    "transcription": "",
+    "russian": "фывфыв",
+    "tags": "",
+    "tags_json": "[]"
+  },
+  {
+    "id": "15295",
+    "english": "фвыфыв",
+    "transcription": "",
+    "russian": "adadssad",
+    "tags": "",
+    "tags_json": "[]"
+  }
+]
