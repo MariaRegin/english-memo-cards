@@ -1,9 +1,6 @@
 import "./App.css";
 import Header from "./components/common/header/Header";
-import ButtonAdd from "./components/wordsList/buttons/buttonAdd/ButtonAdd";
-import ButtonDelete from "./components/wordsList/buttons/buttonDelete/ButtonDelete";
-import ButtonEditCancel from "./components/wordsList/buttons/buttonEdit/buttonEditCancel/ButtonEditCancel";
-import ButtonEditConfirm from "./components/wordsList/buttons/buttonEdit/buttonEditConfirm/ButtonEditConfirm";
+import WordCard from "./components/wordCard/wordCard/WordCard";
 import Inputs from "./components/wordsList/newWordInput/Inputs";
 import WordsList from "./components/wordsList/wordsList/WordsList";
 
@@ -15,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       {words ? <Inputs /> : <WordsList />}
+      <WordCard />
     </div>
   );
 }

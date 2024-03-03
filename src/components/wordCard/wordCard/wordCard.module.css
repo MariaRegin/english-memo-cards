@@ -1,0 +1,20 @@
+.card {
+  width: 14em;
+  height: 18em;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.word {
+  font-size: 2em;
+  font-weight: 800;
+  padding-top: 1em;
+}
+
+.transcription {
+  font-weight: 500;
+}
+
+.button {
+  color: white;
+}
