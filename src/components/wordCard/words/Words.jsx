@@ -1,12 +1,11 @@
 import words from "../../../data.json";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import WordCard from "../wordCard/WordCard";
 import ButtonPrevious from "../buttons/buttonPrevious/ButtonPrevious";
 import ButtonNext from "../buttons/buttonNext/ButtonNext";
 
 export default function Words() {
   const [wordIndex, setWordIndex] = useState(0);
-  const [clickedCard, setClickedCard] = useState(false);
 
   const handlePreviousWord = () => {
     if (wordIndex > 0) {
@@ -19,10 +18,6 @@ export default function Words() {
       ? setWordIndex(0)
       : setWordIndex(wordIndex + 1);
   };
-
-  useEffect(() => {
-    setClickedCard(false);
-  }, []);
 
   return (
     <div>

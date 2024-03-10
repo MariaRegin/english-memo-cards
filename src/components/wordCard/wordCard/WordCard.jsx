@@ -1,15 +1,19 @@
 import styles from "./wordCard.module.css";
 import Translation from "../translation/Translation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ButtonCheck from "../buttons/buttonCheck/ButtonCheck";
 
 export default function WordCard(props) {
   const [clicked, setClicked] = useState(false);
-  const { english, transcription } = props;
+  const { english = "Кот", transcription = "Пес" } = props;
 
   const handleClick = () => {
     setClicked(!clicked);
   };
+
+  useEffect(() => {
+    setClicked(false);
+  }, [transcription]);
 
   return (
     <div className={styles.card}>
