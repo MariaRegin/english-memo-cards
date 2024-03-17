@@ -2,6 +2,7 @@ import styles from "./wordCard.module.css";
 import Translation from "../translation/Translation";
 import { useState, useEffect } from "react";
 import ButtonCheck from "../buttons/buttonCheck/ButtonCheck";
+import Menu from "../../common/header/menu/Menu";
 
 export default function WordCard(props) {
   const [clicked, setClicked] = useState(false);

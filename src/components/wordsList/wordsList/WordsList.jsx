@@ -5,6 +5,7 @@ import ButtonEdit from "../buttons/buttonEdit/buttonEdit/ButtonEdit";
 import ButtonEditCancel from "../buttons/buttonEdit/buttonEditCancel/ButtonEditCancel";
 import { useState } from "react";
 import ButtonAdd from "../buttons/buttonAdd/ButtonAdd";
+import Menu from "../../common/header/menu/Menu";
 
 export default function WordsList() {
   const [activateEdit, setActivateEdit] = useState(false);
@@ -15,6 +16,7 @@ export default function WordsList() {
 
   return (
     <div>
+      <Menu />
       <div className={styles.wordslist}>
         {words.map((word) => (
           <div className={styles.line}>

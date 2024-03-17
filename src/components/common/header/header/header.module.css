@@ -1,7 +1,9 @@
 .header {
-  color: rgb(246, 240, 240);
   text-align: left;
-  padding: 100px;
+}
+
+.content {
+  padding: 8em;
 }
 
 .title {
