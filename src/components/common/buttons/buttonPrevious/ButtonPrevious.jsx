@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../common/buttons/button/Button";
+import Button from "../button/Button";
 import styles from "./buttonPrevious.module.css";
 
 export default function ButtonPrevious(props) {

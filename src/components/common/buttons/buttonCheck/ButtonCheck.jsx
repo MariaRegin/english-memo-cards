@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../common/buttons/button/Button";
+import Button from "../button/Button";
 
 export default function ButtonCheck(props) {
   const onChangeClick = props.onChangeClick;

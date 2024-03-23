@@ -3,11 +3,11 @@ import styles from "./error.module.css";
 
 export default function Error() {
   return (
-    <div>
-      <h2 className={styles.title}>Sorry, такой страницы нет (¬_¬ )</h2>
+    <main>
+      <h1 className={styles.title}>Sorry, такой страницы нет (¬_¬ )</h1>
       <p>
         Наверняка то, что вам нужно, есть <Link to="/">на главной</Link>
       </p>
-    </div>
+    </main>
   );
 }

@@ -1,10 +1,10 @@
 import words from "../../../data.json";
 import styles from "./wordsList.module.css";
-import ButtonDelete from "../buttons/buttonDelete/ButtonDelete";
-import ButtonEdit from "../buttons/buttonEdit/buttonEdit/ButtonEdit";
-import ButtonEditCancel from "../buttons/buttonEdit/buttonEditCancel/ButtonEditCancel";
+import ButtonDelete from "../../common/buttons/buttonDelete/ButtonDelete";
+import ButtonEdit from "../../common/buttons/buttonEdit/ButtonEdit";
+import ButtonEditCancel from "../../common/buttons/buttonEditCancel/ButtonEditCancel";
 import { useState } from "react";
-import ButtonAdd from "../buttons/buttonAdd/ButtonAdd";
+import ButtonAdd from "../../common/buttons/buttonAdd/ButtonAdd";
 import Menu from "../../common/header/menu/Menu";
 
 export default function WordsList() {

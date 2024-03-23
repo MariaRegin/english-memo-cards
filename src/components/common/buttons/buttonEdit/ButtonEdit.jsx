@@ -1,4 +1,4 @@
-import Button from "../../button/Button";
+import Button from "../button/Button";
 
 export default function ButtonEdit(props) {
   const onChangeClick = props.onChangeClick;

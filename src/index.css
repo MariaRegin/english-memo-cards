@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("fonts/Mulish/static/Mulish-Medium.woff") format("woff"),
+    url("fonts/Mulish/static/Mulish-Medium.woff2") format("woff2"),
+    url("fonts/Mulish/static/Mulish-Medium.ttf") format("truetype");
+}
+
 body {
-  font-family: "Mulish", Arial, Helvetica, sans-serif;
+  font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(246, 240, 240);
   background-color: rgb(218, 153, 87);
 }
