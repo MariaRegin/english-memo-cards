@@ -3,14 +3,25 @@
 }
 
 .content {
-  padding: 8em;
+  display: flex;
+  padding: 5em;
 }
 
 .title {
-  font-size: 3.5em;
+  font-size: 4em;
+}
+
+.emphasize {
+  color: var(--color-main-emphasize);
 }
 
 .intro {
   font-size: 2em;
   font-weight: 500;
+}
+
+.image {
+  margin-top: 42.88px;
+  margin-left: 11em;
+  width: 400px;
 }

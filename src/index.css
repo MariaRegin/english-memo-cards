@@ -5,8 +5,17 @@
     url("fonts/Mulish/static/Mulish-Medium.ttf") format("truetype");
 }
 
+:root {
+  --color-main-dark: rgb(21, 20, 20);
+  --color-main-light: rgb(248, 243, 243);
+  --color-main-emphasize: #b5179e;
+  --btn-color-primary: #4cc9f0;
+  --btn-color-secondary: #3a0ca3;
+  --btn-color-hover: #4895ef;
+}
+
 body {
-  font-family: "Mulish", Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(246, 240, 240);
-  background-color: rgb(218, 153, 87);
+  font-family: "Mulish-Medium", Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-main-dark);
+  background-color: var(--color-main-light);
 }

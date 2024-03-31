@@ -1,8 +1,8 @@
 import words from "../../../data.json";
 import { useState } from "react";
 import WordCard from "../wordCard/WordCard";
-import ButtonPrevious from "../buttons/buttonPrevious/ButtonPrevious";
-import ButtonNext from "../buttons/buttonNext/ButtonNext";
+import ButtonPrevious from "../../common/buttons/buttonPrevious/ButtonPrevious";
+import ButtonNext from "../../common/buttons/buttonNext/ButtonNext";
 
 export default function Words() {
   const [wordIndex, setWordIndex] = useState(0);

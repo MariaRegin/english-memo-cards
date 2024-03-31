@@ -1,15 +1,11 @@
-.wordslist {
-  color: white;
+.wordsContainer {
+  margin-top: 8em;
+  border: 1px solid grey;
+  width: auto;
 }
 
 .line {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 2px solid white;
-}
-
-.button {
-  background-color: red;
-  width: 50px;
-  height: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid grey;
 }

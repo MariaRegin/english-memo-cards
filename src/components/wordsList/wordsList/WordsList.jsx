@@ -6,38 +6,71 @@ import ButtonEditCancel from "../../common/buttons/buttonEditCancel/ButtonEditCa
 import { useState } from "react";
 import ButtonAdd from "../../common/buttons/buttonAdd/ButtonAdd";
 import Menu from "../../common/header/menu/Menu";
+import NewWordInput from "../newWordInput/NewWordInput";
 
 export default function WordsList() {
   const [activateEdit, setActivateEdit] = useState(false);
+  const [editedWords, setEditedWords] = useState(words);
 
-  const handleChange = () => {
-    setActivateEdit(!activateEdit);
-  };
+  {
+    const handleChange = () => {
+      setActivateEdit(!activateEdit);
+    };
 
-  return (
-    <div>
-      <Menu />
-      <div className={styles.wordslist}>
-        {words.map((word) => (
-          <div className={styles.line}>
-            <p>{word.english}</p>
-            <p>{word.russian}</p>
-            <div>
-              {!activateEdit && (
-                <ButtonEdit
-                  className={styles.button}
-                  onChangeClick={handleChange}
-                />
-              )}
-              {activateEdit && <ButtonAdd />}
-              {activateEdit && (
-                <ButtonEditCancel onChangeClick={handleChange} />
-              )}
-              <ButtonDelete />
+    const handleInputChange = (index, field, value) => {
+      const updatedWords = editedWords.map((word, i) => {
+        if (i === index) {
+          return { ...word, [field]: value };
+        }
+        return word;
+      });
+      setEditedWords(updatedWords);
+    };
+
+    return (
+      <main>
+        <Menu />
+        <div className={styles.wordsContainer}>
+          <h1>Мой словарь</h1>
+          <NewWordInput />
+          {editedWords.map((word, index) => (
+            <div className={styles.line} key={index}>
+              <input
+                type="text"
+                value={word.english}
+                onChange={(e) =>
+                  handleInputChange(index, "english", e.target.value)
+                }
+                disabled={!activateEdit}
+              />
+              <input
+                type="text"
+                value={word.russian}
+                onChange={(e) =>
+                  handleInputChange(index, "russian", e.target.value)
+                }
+                disabled={!activateEdit}
+              />
+              <input
+                type="text"
+                value={word.transcription}
+                onChange={(e) =>
+                  handleInputChange(index, "transcription", e.target.value)
+                }
+                disabled={!activateEdit}
+              />
+              <div>
+                {!activateEdit && <ButtonEdit onChangeClick={handleChange} />}
+                {activateEdit && <ButtonAdd />}
+                {activateEdit && (
+                  <ButtonEditCancel onChangeClick={handleChange} />
+                )}
+                <ButtonDelete />
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+          ))}
+        </div>
+      </main>
+    );
+  }
 }
