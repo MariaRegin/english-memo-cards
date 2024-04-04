@@ -17,10 +17,10 @@ export default function WordCard(props) {
 
   useEffect(() => {
     setClicked(false);
-    if (btn.current) {
+    if (!clicked && btn.current) {
       btn.current.focus();
     }
-  }, [transcription]);
+  }, [clicked, transcription]);
 
   return (
     <div className={styles.card}>

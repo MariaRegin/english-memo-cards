@@ -6,7 +6,7 @@ import ButtonEditCancel from "../../common/buttons/buttonEditCancel/ButtonEditCa
 import { useState } from "react";
 import ButtonAdd from "../../common/buttons/buttonAdd/ButtonAdd";
 import Menu from "../../common/header/menu/Menu";
-import NewWordInput from "../newWordInput/NewWordInput";
+import Inputs from "../inputs/Inputs";
 
 export default function WordsList() {
   const [activateEdit, setActivateEdit] = useState(false);
@@ -32,7 +32,7 @@ export default function WordsList() {
         <Menu />
         <div className={styles.wordsContainer}>
           <h1>Мой словарь</h1>
-          <NewWordInput />
+          <Inputs />
           {editedWords.map((word, index) => (
             <div className={styles.line} key={index}>
               <input
