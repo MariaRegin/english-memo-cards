@@ -50,7 +50,7 @@ export default function WordsList() {
     return (
       <main>
         <Menu />
-        <form className={styles.wordsContainer}>
+        <div className={styles.wordsContainer}>
           <h1>Мой словарь</h1>
           <Inputs />
           {editedWords.map((word, index) => (
@@ -92,7 +92,7 @@ export default function WordsList() {
               </div>
             </div>
           ))}
-        </form>
+        </d>
       </main>
     );
   }
