@@ -42,9 +42,9 @@ export default function WordsList() {
 
     const handleEmptyInput = (value) => {
       if (value === "") {
-        setEmptyInputCheck(emptyInputCheck);
+        setEmptyInputCheck(true);
       }
-      setEmptyInputCheck(!emptyInputCheck);
+      setEmptyInputCheck(false);
     };
 
     return (
@@ -92,7 +92,7 @@ export default function WordsList() {
               </div>
             </div>
           ))}
-        </d>
+        </div>
       </main>
     );
   }
