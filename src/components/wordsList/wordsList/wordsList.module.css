@@ -1,11 +1,24 @@
 .wordsContainer {
   margin-top: 8em;
-  border: 1px solid grey;
   width: auto;
 }
 
 .line {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid grey;
+  grid-gap: 0.5em;
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+.input {
+  background-color: rgb(236, 225, 225);
+}
+
+.input:focus {
+  background-color: rgb(204, 233, 243);
+}
+
+.invalid {
+  border: 2px solid red;
 }
