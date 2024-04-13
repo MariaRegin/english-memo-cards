@@ -10,6 +10,7 @@ const WordsContext = createContext({
 
 export default WordsContext;
 
+//Старая версия:
 //import { createContext, useState, useEffect } from "react";
 //export const contextProvider = createContext();
 
