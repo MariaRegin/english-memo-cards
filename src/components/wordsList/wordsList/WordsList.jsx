@@ -1,30 +1,30 @@
-import words from "../../../data.json";
 import styles from "./wordsList.module.css";
 import ButtonDelete from "../../common/buttons/buttonDelete/ButtonDelete";
 import ButtonEdit from "../../common/buttons/buttonEdit/ButtonEdit";
 import ButtonEditCancel from "../../common/buttons/buttonEditCancel/ButtonEditCancel";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { contextProvider } from "../../../context/WordsContext/WordsContext";
 import ButtonAdd from "../../common/buttons/buttonAdd/ButtonAdd";
 import Menu from "../../common/header/menu/Menu";
 import Inputs from "../inputs/Inputs";
+import WordEnglish from "./WordEnglish/WordEnglish";
+import WordRussian from "./WordRussian/WordRussian";
+import WordTranscription from "./WordTranscription/WordTransctiption";
 
 export default function WordsList() {
   const [activateEdit, setActivateEdit] = useState(false);
-  const [editedWords, setEditedWords] = useState(words);
   const [emptyInputCheck, setEmptyInputCheck] = useState(false);
+  const { wordsList, editWord } = useContext(contextProvider);
 
   const handleChange = () => {
     setActivateEdit(!activateEdit);
   };
 
-  const handleInputChange = (index, field, value) => {
-    const updatedWords = editedWords.map((word, i) => {
-      if (i === index) {
-        return { ...word, [field]: value };
-      }
-      return word;
-    });
-    setEditedWords(updatedWords);
+  const handleEditWord = (word, value, field) => {
+    const updatedWordsList = wordsList.map((w) =>
+      w === word ? { ...w, [field]: value } : w
+    );
+    editWord(updatedWordsList);
     handleEmptyInput(value);
   };
 
@@ -40,32 +40,22 @@ export default function WordsList() {
       <div className={styles.wordsContainer}>
         <h1>Мой словарь</h1>
         <Inputs />
-        {editedWords.map((word, index) => (
-          <div className={styles.line} key={index}>
-            <input
-              className={!emptyInputCheck ? styles.input : styles.invalid}
-              type="text"
+        {wordsList.map((word, index) => (
+          <div className={styles.table} key={index}>
+            <WordEnglish
               value={word.english}
-              onChange={(e) =>
-                handleInputChange(index, "english", e.target.value)
-              }
+              onChange={(e) => handleEditWord(word, e.target.value, "english")}
               disabled={!activateEdit}
             />
-            <input
-              className={!emptyInputCheck ? styles.input : styles.invalid}
-              type="text"
+            <WordRussian
               value={word.russian}
-              onChange={(e) =>
-                handleInputChange(index, "russian", e.target.value)
-              }
+              onChange={(e) => handleEditWord(word, e.target.value, "russian")}
               disabled={!activateEdit}
             />
-            <input
-              className={!emptyInputCheck ? styles.input : styles.invalid}
-              type="text"
+            <WordTranscription
               value={word.transcription}
               onChange={(e) =>
-                handleInputChange(index, "transcription", e.target.value)
+                handleEditWord(word, e.target.value, "transcription")
               }
               disabled={!activateEdit}
             />
@@ -84,3 +74,12 @@ export default function WordsList() {
     </main>
   );
 }
+
+// Старый код до выделения инпутов в отдельные компоненты
+//  {/* <input
+//       className={!emptyInputCheck ? styles.input : styles.invalid}
+//       type="text"
+//       value={word.transcription}
+//       onChange={(e) => handleEditWord(word, e.target.value)}
+//       disabled={!activateEdit}
+//     /> */}
