@@ -5,7 +5,7 @@ import ButtonCheck from "../../common/buttons/buttonCheck/ButtonCheck";
 
 export default function WordCard(props) {
   const [clicked, setClicked] = useState(false);
-  const { english = "Кот", transcription = "Пес" } = props;
+  const { english, transcription } = props;
   const [learnedWords, setLearnedWords] = useState(0);
 
   const handleClick = () => {

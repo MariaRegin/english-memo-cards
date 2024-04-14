@@ -1,5 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import WordsContext from "../../../context/WordsContext/WordsContext";
 
 export default function Translation() {
-  return <React.Fragment>Аист</React.Fragment>;
+  const { words } = useContext(WordsContext);
+
+  return <div>kkkkk</div>;
 }

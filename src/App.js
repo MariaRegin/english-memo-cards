@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/common/header/header/Header";
 import WordsList from "./components/wordsList/wordsList/WordsList";
 import Words from "./components/wordCard/words/Words";
-import Error from "./components/common/error/Error";
+import Error from "./components/common/errors/Missing/Missing";
 import WordsContext from "./context/WordsContext/WordsContext";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   async function fetchWords() {
     try {
-      const response = await fetch("/api/words");
+      const response = await fetch("/api/words/");
       if (!response.ok) {
         throw new Error(
           "Что-то пошло не так, попробуйте перезагрузить страницу"
@@ -93,6 +93,8 @@ function App() {
           addWord,
           updateWord,
           deleteWord,
+          loading,
+          // catchError,
         }}
       >
         <div className="App">
@@ -109,23 +111,3 @@ function App() {
 }
 
 export default App;
-
-//Старая версия:
-// function App() {
-//   return (
-//     <Router>
-//       <ContextProvider>
-//         <div className="App">
-//           <Routes>
-//             <Route path="/" element={<Header />} />
-//             <Route path="/vocabulary" element={<WordsList />} />
-//             <Route path="/cards" element={<Words />} />
-//             <Route path="*" element={<Error />} />
-//           </Routes>
-//         </div>
-//       </ContextProvider>
-//     </Router>
-//   );
-// }
-
-// export default App;

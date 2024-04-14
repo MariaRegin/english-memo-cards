@@ -22,3 +22,8 @@
 .invalid {
   background-color: rgb(241, 144, 144);
 }
+
+.error {
+  display: -moz-box;
+  color: rgb(223, 68, 68);
+}

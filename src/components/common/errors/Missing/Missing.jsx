@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./error.module.css";
+import styles from "./missing.module.css";
 
 export default function Error() {
   return (
