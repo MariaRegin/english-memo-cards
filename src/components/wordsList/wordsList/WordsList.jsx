@@ -55,32 +55,26 @@ export default function WordsList() {
           <div className={styles.table} key={word.id}>
             <WordEnglish
               value={word.english}
-              onChange={(e) =>
-                handleUpdateWord(word, e.target.value, "english")
-              }
+              onChange={(e) => handleUpdateWord(e.target.value)}
               disabled={!activateEdit}
             />
             <WordRussian
               value={word.russian}
-              onChange={(e) =>
-                handleUpdateWord(word, e.target.value, "russian")
-              }
+              onChange={(e) => handleUpdateWord(e.target.value)}
               disabled={!activateEdit}
             />
             <WordTranscription
               value={word.transcription}
-              onChange={(e) =>
-                handleUpdateWord(word, e.target.value, "transcription")
-              }
+              onChange={(e) => handleUpdateWord(e.target.value)}
               disabled={!activateEdit}
             />
             <div>
-              {!activateEdit && <ButtonEdit onEdit={handleUpdateWord} />}
+              {!activateEdit && <ButtonEdit onChangeClick={handleUpdateWord} />}
               {activateEdit && <ButtonAdd disabled={emptyInputCheck} />}
               {activateEdit && (
                 <ButtonEditCancel onChangeClick={handleChange} />
               )}
-              <ButtonDelete onDelete={handleDeleteWord} />
+              <ButtonDelete onChangeClick={handleDeleteWord} />
             </div>
             {emptyInputCheck && <p>Введите слово</p>}
           </div>

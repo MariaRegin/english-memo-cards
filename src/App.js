@@ -88,8 +88,8 @@ function App() {
     <Router>
       <WordsContext.Provider
         value={{
-          words: words,
-          fetchWords: fetchWords,
+          words,
+          fetchWords,
           addWord,
           updateWord,
           deleteWord,
