@@ -1,37 +1,28 @@
 import styles from "./wordCard.module.css";
-import Translation from "../translation/Translation";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import ButtonCheck from "../../common/buttons/buttonCheck/ButtonCheck";
+import { observer } from "mobx-react";
 
-export default function WordCard(props) {
+const WordCard = observer((props) => {
   const [clicked, setClicked] = useState(false);
-  const { english, transcription } = props;
+  const { english, transcription, russian } = props;
   const [learnedWords, setLearnedWords] = useState(0);
+
+  console.log(russian);
 
   const handleClick = () => {
     setClicked(!clicked);
     setLearnedWords(learnedWords + 1);
   };
 
-  const btn = useRef(null);
-
-  useEffect(() => {
-    setClicked(false);
-    if (!clicked && btn.current) {
-      btn.current.focus();
-    }
-  }, [clicked, transcription]);
-
   return (
     <div className={styles.card}>
       <p className={styles.word}>{english}</p>
       <p className={styles.transcription}>{transcription}</p>
-      {clicked ? (
-        <Translation />
-      ) : (
-        <ButtonCheck ref={btn} onChangeClick={handleClick} />
-      )}
+      {clicked ? <p>{russian}</p> : <ButtonCheck onChangeClick={handleClick} />}
       <div>Выучено слов: {learnedWords}</div>
     </div>
   );
-}
+});
+
+export default WordCard;

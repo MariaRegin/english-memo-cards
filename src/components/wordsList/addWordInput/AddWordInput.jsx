@@ -1,8 +1,10 @@
 import { useState, useContext } from "react";
 import ButtonAdd from "../../common/buttons/buttonAdd/ButtonAdd";
 import styles from "./addWordInput.module.css";
+import { observer } from "mobx-react";
 
-export default function AddWordInput({ onSubmit }) {
+const AddWordInput = observer((props) => {
+  const { onSubmit } = props;
   const [english, setEnglish] = useState("");
   const [russian, setRussian] = useState("");
   const [transcription, setTranscription] = useState("");
@@ -39,8 +41,9 @@ export default function AddWordInput({ onSubmit }) {
         value={transcription}
         placeholder="Транскрипция"
       />
-      <div>{english}</div>
       <ButtonAdd type="submit" />
     </form>
   );
-}
+});
+
+export default AddWordInput;
